@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word COUNT</title>
+</head>
+<style>
+    *{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    background-color: rgb(14, 61, 46);
+
+}
+.wrapper{
+    background-color: rgb(163, 163, 50);
+    display:flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 2rem;
+    justify-content: end;
+    align-items: center;
+    border-radius: 30px;
+    margin-top: 3rem;
+    gap: 2rem;
+    font-size: 1.1rem;
+
+}
+textarea{
+    background-color: rgb(218, 214, 214);
+    border: .2rem solid black;
+    border-radius: 20px;
+    font-size: larger;
+    cursor:text;
+    min-width:258px ;
+    min-height:157px ;
+}
+button{
+    display: inline-block;
+    border-radius: 10px;
+    padding: .6rem;
+    text-align: center;
+    cursor: pointer;
+    font-size: medium;
+    background-color: rgb(24, 255, 255); 
+    margin-right: 20px; 
+}
+button:hover{
+    background-color: brown;
+    color: whitesmoke;
+    font-size: medium;
+}
+#buttons{
+    display: flex;
+    justify-content: center;
+}
+
+</style>
+<body>
+    <div class="wrapper">      
+        <h3 style="color: rgb(29, 28, 25);">WORD COUNTER & LETTER COUNT</h3>
+        <div><textarea name="" id="word-input" cols="30" rows="10" placeholder="Enter your word"></textarea></div>
+        <div id="buttons">
+            <button type="submit" onclick="wordcount()" >WORD COUNT</button>
+            <button type="submit" onclick="lettercount()" >LETTER COUNT</button>
+        </div>
+        <div id="result" style="text-decoration: underline; font-size: larger; color: #007906;"></div>
+        <div id="result1" style="text-decoration: underline; font-size: larger; color: #3b0fb4;"></div>
+    </div>
+       <script>
+        function wordcount(){
+            let word=document.getElementById("word-input").value;
+            let array_words=word.split(" ");
+            console.log(array_words);
+            var final_array=[];
+            for(var i=0;i<array_words.length;i++){
+                if(array_words[i]!=='' && array_words[i]!==',' && array_words[i]!=="."){
+                    final_array.push(array_words[i]);
+                }}
+            console.log(final_array);
+            display=document.getElementById("result");
+            display.innerHTML="Total number of words="+final_array.length;
+        }
+        function lettercount(){
+            let word1=document.getElementById("word-input").value;
+            let array_words1=word1.split(" ");
+            console.log(array_words1);
+            var count=0;
+            for(var i=0;i<array_words1.length;i++){
+                for(var j=0;j<array_words1[i].length;j++){
+                    if((array_words1[i][j]>="a" && array_words1[i][j]<="z")|| (array_words1[i][j]>="A" && array_words1[i][j]<="Z")){
+                        console.log(array_words1[i][j]);
+                        count+=1;
+                    }
+                }
+               };
+            console.log(count);
+            display1=document.getElementById("result1");
+            display1.innerHTML="Total number of letters="+count;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <script src="counter.js"></script>
+    <link rel="stylesheet" href="counter.css">
+</head>
+<body>
+    <div class="background">
+        <div class="wrapper">
+            <h2>COUNTER</h2>
+            <div class="div-input-no">
+                <input type="text" id="number"  placeholder="Enter the steps ">
+            </div>
+            <div class="buttons">
+                <button type="submit" onclick="add()" id="add-button">ADD </button>
+                <button type="submit" onclick="sub()" id="minus-button">MINUS </button>
+                <button id="reset" style="background-color: rgb(231, 39, 71);" onclick="reset()">RESET</button>
+            </div>
+            <div style="text-align: center;">Value is <span id="result"></span> </div>
+        </div>
+    </div>
+</body>
+</html>

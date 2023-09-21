@@ -1,0 +1,104 @@
+body{
+    background-color: #2C3A47;
+}
+.main-box{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 60px;
+}
+.container{
+    background-color: #1dd1a1;
+    display: inline;
+    margin: 0%;
+    padding: 40px;
+    min-width: 350px;  
+  border-radius: 10px;
+}
+li{
+    position: relative;
+    cursor:pointer;
+    margin-bottom: 10px;
+    background-color: #c3cc7b;
+    list-style: none;
+    padding: 8px;
+    display: block;
+    border-radius: 7px;
+    outline: 1px solid grey;
+    margin-left: 0%;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding-left: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ul{
+    list-style: none;
+    padding-left: 0%;
+}
+input[type='text']{
+    border-radius: 8px;
+    height: 30px;
+    background-color: #ccccc9;
+    font-size: medium;
+    border: none;
+    font-family:serif;
+    min-width: 250px;
+}
+input[type='text']:focus{
+    outline: none;
+    background-color: bisque;
+    font-size: 20px;
+    font-weight: 500;
+    min-width: 250px;
+}
+input:focus::placeholder{
+    font-size: 15px;
+}
+input::placeholder{
+    color: rgb(61, 53, 53);
+}
+.close{
+    display: none;
+}
+button{
+    background-color: #25CCF7;
+    color: rgb(3, 22, 37);
+    padding: 7px 20px 7px ;
+    border:2px solid rgb(133, 120, 95);
+    border-radius: 5px;
+    font-size: medium;
+    margin-left: 14px;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+button:hover{
+    background-color: chartreuse;
+    cursor: pointer;
+}
+.completed{
+    font-style: oblique;
+    text-decoration: line-through;
+    background-color: rgb(206, 87, 87);
+}
+#delete-button{
+    right: 10px;
+    font-size: x-large;
+    position: absolute;
+    bottom: 5px;   
+    padding: 0px;
+    color: rgb(126, 10, 10);
+    border:none;
+    background-color: inherit;
+    padding-top: 0%;
+}
+#delete-button:hover{
+    transform: rotate(360deg);
+
+    transition-duration: .3s;
+    color: red;
+    background-color: inherit;
+    filter:blur(.9px);
+    transform-origin: center;
+}

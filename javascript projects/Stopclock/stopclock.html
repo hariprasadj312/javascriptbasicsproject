@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STOPCLOCK</title>
+</head>
+<style>
+    body{
+        background-color: #b7bc6b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container{
+        background-color: #caad81;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        min-height: 200px;
+        min-width: 300px;
+        justify-content: space-around;
+        padding: 25px;
+        border-radius: 20px;
+        border: 3px solid black;
+        -webkit-box-shadow: 6px 4px 24px 1px rgba(224,127,9,1);
+-moz-box-shadow: 6px 4px 24px 1px rgba(224,127,9,1);
+box-shadow: 6px 4px 24px 1px rgba(224,127,9,1);
+    }
+    .times{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+    button{
+        padding: 8px;
+        min-width: 20px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        font-size: medium;
+        font-weight: 600;
+        background-color: darksalmon;
+        color: rgb(17, 8, 2);
+        cursor: pointer;
+        border: 2px solid rgb(39, 13, 13);
+    }
+    #start:hover,#stop:hover,#reset:hover{
+        background-color: rgb(160, 190, 99);
+        color: black   ;
+    }
+    #start:focus,#stop:focus,#reset:focus{
+        padding: 11px;
+        border:none;
+        outline: 2px solid rgb(19, 9, 9);
+
+    }
+    div{
+        font-size: xx-large;
+        font-weight: 700}
+    #start{
+        background-color: #20bf6b;
+    }
+    #stop{
+        background-color: tomato;
+    }
+    #reset{
+        background-color: #eb3b5a;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="times">
+            <div id="hour">00</div>
+            <div>:</div>
+            <div id="min">00</div>
+            <div>:</div>
+            <div id="sec">00</div>
+            <div>:</div>
+            <div id="msec">00</div>
+        </div>
+        <div id="buttons">
+            <button type="submit" id="start"  onclick="display()">START</button>
+            <button typze="submit" id="stop" onclick="stop()">STOP</button>
+            <button type="submit" id="reset" onclick="reset()">RESET</button>
+        </div>
+    </div>
+    <script src="stopclock.js">
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIVE TIME</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:100vh;
+        background-color: rgb(42, 135, 171);
+    }
+    #box{
+        background-color: rgba(234, 249, 31, 0.642);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 20px;
+        min-width: 300PX;
+        border:2px solid brown;
+    }
+    h3{
+        font-size:xx-large;
+        color: red;
+        font-weight: 700; 
+    }
+</style>
+<body>
+    <div id="box">
+        <h2 onclick="work()">THE CURRENT TIME  IS</h2>
+        <h3 id="time" ></h3>
+    </div>
+    <script>
+        hari=setInterval(function work(){
+            let time=new Date();
+            sec=time.getSeconds();
+            hr=time.getHours();
+            thr=hr>12?hr%12:hr;
+            thr=thr<10?'0'+thr:thr;
+            min=time.getMinutes();
+            tmin=min<10?'0'+min:min;
+            psec=sec<10?'0'+sec:sec;
+            console.log(`${hr}:${min}:${sec}`);
+            document.getElementById("time").innerHTML=`${thr}:${tmin}:${psec}`;
+        },10);
+    </script>
+</body>
+</html>

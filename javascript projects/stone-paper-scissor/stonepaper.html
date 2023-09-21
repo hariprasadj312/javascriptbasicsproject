@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STONE PAPER SCISSOR</title>
+    <link rel="stylesheet" href="stonepaper.css">
+</head>
+<body>
+    <div id="container">
+        <h2 id="result"></h2>
+        <p>CLICK YOUR CHOICE BELOW</p>
+        <div>
+            <button type="submit" id="stone" onclick="game('stone')">STONE</button>
+            <button type="submit" id="paper" onclick="game('paper')">PAPER</button>
+            <button type="submit" id="scissor" onclick="game('scissor')">SCISSOR</button>
+        </div>
+        <p >YOUR CHOICE: <span id="mychoice"></span></p>
+        <p >COMPUTER CHOICE: <span id="computerchoice"></span></p>
+    </div>
+    <script>
+        function game(choice){
+            ar=['stone','paper','scissor'];
+            c=(Math.floor(Math.random()*3));
+            console.log(c);
+            console.log(ar[c]);
+            var result=ar[c]===choice?"TIE":ar[c]=="scissor"&& choice=="paper"?"COMPUTER WINS":ar[c]=="paper"&& choice=="stone"?"COMPUTER WINS":ar[c]=="stone"&& choice=="scissor"?"COMPUTER WINS":"YOU WIN!"
+            let a=document.getElementById("result");
+            a.innerHTML=result;
+            document.getElementById("mychoice").innerHTML=choice;
+            document.getElementById("computerchoice").innerHTML=ar[c];
+        }
+    </script>
+</body>
+</html>

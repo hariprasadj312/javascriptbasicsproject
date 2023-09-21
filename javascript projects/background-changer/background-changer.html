@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Background change</title>
+        <script>
+            function no(){
+            var a=Number(Math.floor(Math.random()*250));
+            var b=Number(Math.floor(Math.random()*250));
+            var c=Number(Math.floor(Math.random()*250));
+            console.log(a,b,c);
+            console.log('rgb('+a+','+b+','+c+')');
+            var colour='rgb('+a+','+b+','+c+')';
+            typeof colour;
+            let change=document.getElementById("backg");
+            return change.style.backgroundColor=colour;
+            };
+        </script>
+</head>
+<body id="backg">
+        <h2 style="text-align: center;">Backgound changer</h2>
+        <p style="text-align: center;">Click below button to change colour</p>
+        <button type="submit" onclick="no()" style="display: flex; margin: auto; cursor:pointer;" >CLICK</button>
+</body>
+</html>

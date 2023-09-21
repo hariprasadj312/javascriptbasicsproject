@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 1.5rem;
+    height: 100%;
+    background-image: -webkit-linear-gradient(violet,lightblue,rgb(175, 86, 101),orange);
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.backg{
+    
+    display: flex;
+    margin:0;
+    justify-content: center;
+    
+}
+.back{
+    margin-top: 40PX;
+    background-color: rgb(254, 147, 169);
+    justify-content: center;
+    align-items: center;
+    padding: .25rem;
+    border: 0.2rem solid orangered;
+    border-radius: .3rem;
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
+
+}
+input{
+    color: rgba(219, 223, 21, 0.932);
+    background-color: rgb(40, 105, 105);
+    border: .05rem solid lightblue;
+    border-radius: .3rem;
+    height: 1rem;
+    font-size: 1rem;
+    padding: .4rem;
+    width: 60px;
+}
+input:hover{
+    background-color: lightsalmon;
+    color: black;
+    font-weight: 500;
+    
+
+}
+label{
+    color: rgb(55, 8, 8);
+    font-weight: 500;
+    min-width: 299px;
+}
+header{
+    display:block;
+    color: rgb(23, 27, 19);
+    background-color: rgb(189, 142, 14);
+    font-weight: 800;
+    text-align: center;
+    height: 2rem;padding-top: .7rem;
+}
+button{
+    background-color: rgb(16, 88, 16);
+    color: whitesmoke;
+    border: .1rem solid grey;
+    border-radius: 15px;
+    padding:5PX 15PX ;
+    margin-top: 1rem;
+    display: inline-block;
+    margin-right: 1rem;
+    
+}
+button:hover{
+    background-color: rgb(119, 247, 119);
+    color: black;
+    border: .1rem solid rgb(44, 43, 43);
+}
+#reset{
+    background-color: rgb(235, 54, 54);
+}
